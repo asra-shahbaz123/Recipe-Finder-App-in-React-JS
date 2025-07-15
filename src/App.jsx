@@ -105,7 +105,7 @@ function App() {
               className="welcome-icon"
             />
             <h2>Welcome to Recipe Finder!</h2>
-            <p>Type an ingredient or dish name above and discover delicious recipes.</p>
+            <p>Type an ingredient or dish name below and discover delicious recipes.</p>
           </div>
         )}
 
