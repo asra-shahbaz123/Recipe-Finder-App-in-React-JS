@@ -271,19 +271,28 @@ main {
   cursor: pointer;
   font-size: 22px;
   margin-left: 8px;
-  transition: color 0.2s, transform 0.2s;
+  transition: all 0.3s ease;
+  text-shadow: none;
+  border: none;
+  outline: none;
+  background: none;
+  font-weight: normal;
+  -webkit-text-stroke: none;
 }
 
 .heart-icon.filled {
-  color: var(--heart-color);
+  color: var(--primary-color);
+  text-shadow: 0 2px 4px rgba(224, 122, 95, 0.3);
 }
 
 .heart-icon.empty {
-  color: var(--heart-empty);
+  color: var(--border-color);
+  text-shadow: 0 1px 2px rgba(255, 214, 224, 0.5);
 }
 
 .heart-icon:hover {
   transform: scale(1.2);
+  filter: brightness(1.1);
 }
 
 /* --- Loading & Error States --- */
@@ -517,35 +526,43 @@ main {
   color: var(--primary-color);
   font-weight: bold;
   box-shadow: 0 2px 8px rgba(224, 122, 95, 0.3);
-  /* Desktop-specific styling */
-  font-size: 36px;
-  padding: 8px 12px;
-  background: rgba(224, 122, 95, 0.1);
-  border: 2px solid rgba(224, 122, 95, 0.2);
-  min-width: 48px;
-  min-height: 48px;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: none;
+  -webkit-text-stroke: none;
 }
 
 .modal-fav-btn {
-  color: var(--heart-empty);
+  color: var(--border-color);
   font-size: 28px;
   padding: 0 8px;
-  transition: color 0.2s;
+  transition: all 0.3s ease;
+  text-shadow: none;
+  border: none;
+  outline: none;
+  background: none;
+  font-weight: normal;
+  -webkit-text-stroke: none;
 }
 
 .modal-fav-btn.favorited {
-  color: var(--primary-hover);
-}
-
-.modal-btn:hover {
-  background-color: rgba(224, 122, 95, 0.2);
-  transform: scale(1.05);
+  color: var(--primary-color);
+  text-shadow: 0 2px 4px rgba(224, 122, 95, 0.3);
 }
 
 .modal-close:hover {
-  background-color: rgba(224, 122, 95, 0.25);
-  border-color: rgba(224, 122, 95, 0.4);
-  box-shadow: 0 4px 12px rgba(224, 122, 95, 0.4);
+  background-color: rgba(224, 122, 95, 0.1);
+  transform: scale(1.1);
+  color: var(--primary-hover);
 }
 
 .modal-body {
@@ -793,14 +810,9 @@ main {
     padding-right: max(10px, env(safe-area-inset-right));
   }
 
-  /* Mobile-specific close button styling */
   .modal-close {
     font-size: 24px;
     padding: 5px 8px;
-    background: none;
-    border: none;
-    min-width: auto;
-    min-height: auto;
   }
 
   .modal-fav-btn {
@@ -886,16 +898,6 @@ main {
   .categories-grid {
     gap: 14px;
   }
-  
-  /* Tablet close button - between mobile and desktop */
-  .modal-close {
-    font-size: 32px;
-    padding: 6px 10px;
-    background: rgba(224, 122, 95, 0.08);
-    border: 1px solid rgba(224, 122, 95, 0.15);
-    min-width: 42px;
-    min-height: 42px;
-  }
 }
 
 /* --- Large Screen Optimization --- */
@@ -911,13 +913,5 @@ main {
   
   .modal-content {
     max-width: 800px;
-  }
-  
-  /* Enhanced desktop close button */
-  .modal-close {
-    font-size: 38px;
-    padding: 10px 14px;
-    min-width: 52px;
-    min-height: 52px;
   }
 }
